@@ -29,6 +29,9 @@ export default {
   modules: [
     '@nuxtjs/pwa',
   ],
+  content: {
+
+  }
 
   // build config
   build: {
