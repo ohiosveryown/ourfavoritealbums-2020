@@ -1,9 +1,17 @@
 <!-- layout -->
 <template>
   <main>
-    <h1 class="anim--enter mb-4 font-prim">
+    <ul>
+      <li v-for="post of posts" :key="post.slug">
+        <NuxtLink :to="post.slug">
+          <h1>{{ post.title }}</h1>
+          <h2>{{ post.description }}</h2>
+        </NuxtLink>
+      </li>
+    </ul>
+    <!-- <h1 class="anim--enter mb-4 font-prim">
     Hello World – with nuxt and gsap</h1>
-    <Article class="anim--enter"/>
+    <Article class="anim--enter"/> -->
   </main>
 </template>
 
@@ -25,6 +33,13 @@
       title: 'home',
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
     }),
+    async asyncData({ $content }) {
+      const posts = await $content("entries").fetch();
+
+      return {
+        posts,
+      };
+    },
     components: { Article, },
     mounted() {
       gsap.from('.anim--enter', {
