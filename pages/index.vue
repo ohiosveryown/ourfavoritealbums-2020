@@ -22,7 +22,8 @@
   import Article from '~/components/Article'
   export default {
     head: () => ({
-      title: 'home'
+      title: 'home',
+      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
     }),
     components: { Article, },
     mounted() {
