@@ -1,0 +1,20 @@
+{
+  "name": "ourfavoritealbums-2020",
+  "version": "1.0.0",
+  "description": "Our Favorite Albums (2020) is a communal project built around music & friendship.",
+  "author": "Matthew Pence",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "node-sass": "^5.0.0",
+    "nuxt": "^2.0.0",
+    "sass-loader": "^10.1.0"
+  },
+  "devDependencies": {}
+}
