@@ -4,7 +4,10 @@
     <header data-scroll-section>
       <div class="content">
         <h1 data-scroll data-scroll-speed="-1" class="our font-alpina font-size-xl uc">Our</h1>
-        <h1 data-scroll data-scroll-speed="-2" class="favorite font-saol font-size-xl uc">Favorite</h1>
+        <h1 data-scroll data-scroll-speed="-2" class="favorite font-saol font-size-xl uc">
+          <div class="logo-wrapper"><Logotype class="outline-light"/></div>
+          <span>Favorite</span>
+        </h1>
         <h1 data-scroll data-scroll-speed="-1.5" class="albums font-alpina font-size-xl uc">
           Albums
           <span class="established font-saol font-size-lg">Est. 2018</span>
@@ -32,6 +35,18 @@
 <style lang="scss" scoped>
   @import '~/static/style/grid.scss';
 
+  .logo-wrapper {
+    position: absolute;
+    top: -10%; left: 16vh;
+    width: 30vh; height: 30vh;
+  }
+
+  .logotype {
+    left: 8rem; top: -4.4rem;
+    width: 100%; height: 100%;
+    transform: scale(1.5);
+  }
+
   .content {
     display: flex;
     flex-direction: column;
@@ -49,7 +64,14 @@
   }
 
   .favorite {
-    @include breakpoint(md) { padding: 2rem 0 0 34.4rem; }
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include breakpoint(md) {
+      padding-top: 2rem;
+      span { margin-left: 50vh; }
+    }
   }
 
   .albums {
@@ -65,7 +87,7 @@
 
 <!-- logic -->
 <script>
-  import Article from '~/components/Article'
+  import Logotype from '~/components/Logotype'
   export default {
     head: () => ({
       title: 'home',
@@ -73,12 +95,11 @@
     }),
     async asyncData({ $content }) {
       const posts = await $content("entries").fetch();
-
       return {
         posts,
-      };
+      }
     },
-    components: { Article, },
+    components: { Logotype, },
     mounted() {
       const locoScroll = new LocomotiveScroll({
         el: document.querySelector(".scrollContainer"),
