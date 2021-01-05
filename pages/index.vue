@@ -1,17 +1,33 @@
 <!-- layout -->
 <template>
-  <div class="scrollContainer" data-scroll-container>
-    <main>
-      <section data-scroll-section>
-        <h1 data-scroll>Hey</h1>
-        <p data-scroll>👋</p>
-      </section>
-      <section data-scroll-section>
-          <h2 data-scroll data-scroll-speed="-1">What's up?</h2>
-          <p data-scroll data-scroll-speed="-2">😬</p>
-      </section>
-    </main>
-  </div>
+  <main>
+    <div class="font-alpina">Alpina</div>
+    <div class="font-americana">Americana</div>
+    <div class="font-respira">Repsira</div>
+    <div class="font-saol">Saol</div>
+    <div class="font-steinbeck">Steinbeck</div>
+
+    <ul>
+      <li v-for="post of posts" :key="post.slug">
+        <NuxtLink :to="post.slug">
+          <h1 class="font-alpina uc">{{ post.title }}</h1>
+          <h2>{{ post.description }}</h2>
+        </NuxtLink>
+      </li>
+    </ul>
+    <div class="scrollContainer" data-scroll-container>
+      <main>
+        <section data-scroll-section>
+          <h1 data-scroll>Hey</h1>
+          <p data-scroll>👋</p>
+        </section>
+        <section data-scroll-section>
+            <h2 data-scroll data-scroll-speed="-1">What's up?</h2>
+            <p data-scroll data-scroll-speed="-2">😬</p>
+        </section>
+      </main>
+    </div>
+  </main>
 </template>
 
 <!-- style -->

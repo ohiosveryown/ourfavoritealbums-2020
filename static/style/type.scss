@@ -1,12 +1,40 @@
 @import '~/static/style/grid.scss';
 
 @font-face {
-  font-family: "Blush";
-  src: url("../type/blush.woff2") format("woff2");
+  font-family: "Alpina";
+  src: url("../type/alpina.woff2") format("woff2");
   font-display: block;
 }
 
-.font-prim { font-family: 'Blush', var(--system-ui); }
+@font-face {
+  font-family: "Americana";
+  src: url("../type/americana.woff2") format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Respira";
+  src: url("../type/respira.woff2") format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Saol";
+  src: url("../type/saol.woff2") format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Steinbeck";
+  src: url("../type/steinbeck.woff2") format("woff2");
+  font-display: block;
+}
+
+.font-alpina { font-family: 'Alpina', 'Georgia', sans-serif; }
+.font-americana { font-family: 'Americana', 'Georgia', sans-serif; }
+.font-respira { font-family: 'Respira', 'Georgia', sans-serif; }
+.font-saol { font-family: 'Saol', 'Georgia', sans-serif; }
+.font-steinbeck { font-family: 'Steinbeck', var(--system-ui); }
 
 .bold { -webkit-text-stroke: .2px var(--gravity); }
 .uc { text-transform: uppercase; }
