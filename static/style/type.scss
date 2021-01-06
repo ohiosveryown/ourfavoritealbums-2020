@@ -46,6 +46,9 @@
   @include breakpoint(md) { font-size: 20vh; }
 }
 
+.font-size-md { font-size: 2.8vh; line-height: 1.8; }
+.font-size-sm { font-size: 1.6rem; }
+
 .bold { -webkit-text-stroke: .2px var(--gravity); }
 .uc { text-transform: uppercase; }
 .tac { text-align: center; }

@@ -3,6 +3,7 @@
 // various
 .debug { border: 2px solid hotpink; }
 .pointer { &:hover { cursor: pointer; }}
+.infrared { color: var(--infrared); }
 
 .width {
   position: relative;
@@ -19,8 +20,8 @@
 
 .outline-light {
   color: transparent;
-  text-stroke: 1px #fff;
-  -webkit-text-stroke: 1px #fff;
+  text-stroke: .5px #fff;
+  -webkit-text-stroke: .5px #fff;
 }
 
 .mt-00 { margin-top: calc(var(--unit) * 0.2 ); }
@@ -202,5 +203,5 @@ section {
   margin-right: 0;
   height: 100%;
   overflow-y: scroll;
-  background: pink;
+  // background: pink;
 }
